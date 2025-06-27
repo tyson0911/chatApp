@@ -1,0 +1,213 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f6fa;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 64px;
+}
+
+#chat-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3.5rem 2.5rem 2rem 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.08);
+  width: 540px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1.5px solid #e3e6ee;
+}
+
+#chat-container h2 {
+  text-align: center;
+  color: #4a4a68;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+#messages {
+  list-style: none;
+  padding: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#messages li {
+  padding: 0.7rem 1rem;
+  margin: 0;
+  border: none;
+  font-size: 1rem;
+  word-break: break-word;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+  transition: background 0.2s, color 0.2s;
+}
+
+#messages li.my-message {
+  background: #e3e6ee;
+  color: #222;
+  align-self: flex-end;
+  border-radius: 18px 18px 6px 18px;
+  margin-left: 60px;
+  margin-right: 0;
+  text-align: right;
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(67, 233, 123, 0.04);
+}
+
+#messages li.other-message {
+  background: #f0f1f7;
+  color: #4a4a68;
+  align-self: flex-start;
+  border-radius: 18px 18px 18px 6px;
+  margin-right: 60px;
+  margin-left: 0;
+  text-align: left;
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.04);
+}
+
+#form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #764ba2;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+  background: #f7f7fa;
+  transition: border 0.2s;
+}
+
+#input:focus {
+  border: 1.5px solid #43e97b;
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background: #e3e6ee;
+  color: #4a4a68;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(67, 233, 123, 0.04);
+  transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+  background: #d1d5e6;
+  color: #222;
+}
+
+/* Navbar styles */
+.navbar {
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(102, 126, 234, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2.5rem;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4a4a68;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(31, 38, 135, 0.08);
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+  color: #4a4a68;
+  text-decoration: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar .nav-links a:hover {
+  background: #e3e6ee;
+  color: #222;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 1rem;
+  }
+  .navbar .nav-links {
+    gap: 0.7rem;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Login page container override for new background */
+#login-container {
+  background: rgba(255,255,255,0.97);
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1.5px solid #e3e6ee;
+  margin: 60px auto;
+}
+#login-container h2 { text-align: center; color: #4a4a68; margin-bottom: 1.2rem; }
+#login-form input {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #e3e6ee;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+  background: #f7f7fa;
+  transition: border 0.2s;
+}
+#login-form input:focus { border: 1.5px solid #bfc4d6; }
+#login-form button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background: #e3e6ee;
+  color: #4a4a68;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(67, 233, 123, 0.04);
+  transition: background 0.2s, color 0.2s;
+}
+#login-form button:hover {
+  background: #d1d5e6;
+  color: #222;
+} 
